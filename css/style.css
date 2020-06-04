@@ -28,10 +28,18 @@ body {
   background-color: #f2f2fc;
   min-height: 100vh;
   display: block;
+  padding: 0 30px;
 }
 
 .main-content {
   padding-left: 270px;
+}
+
+.container {
+  max-width: 11000px;
+  width: 100%;
+  margin: auto;
+  background-color: red;
 }
 /*Aside*/
 .aside {
@@ -84,16 +92,103 @@ body {
   right: 0;
 }
 
+.aside .nav-toggler {
+  height: 40px;
+  width: 45px;
+  border: 1px solid #d4d4e3;
+  cursor: pointer;
+  position: fixed;
+  left: 300px;
+  top: 30px;
+  z-index: 11;
+  border-radius: 5px;
+  background-color: #fdf9ff;
+  /* display: -ms-flexbox;
+  display: flex; */
+  display: none;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.aside .nav-toggler span {
+  height: 2px;
+  width: 18px;
+  display: inline-block;
+  position: relative;
+}
+
+.aside .nav-toggler span::before {
+  content: '';
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+
+.aside .nav-toggler span::after {
+  content: '';
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
 .aside .nav {
-  background-color: #ededed;
+  /* background-color: #ededed; */
   list-style: none;
   margin: 80px 0;
   padding: 0;
 }
-.aside .copyright-text {
-  background-color: #ededed;
+
+.aside .nav li {
+  display: block;
 }
-.aside .logo a {
+
+.aside .nav li a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #302e4d;
+  text-decoration: none;
+  line-height: 45px;
+  /* background-color: red; */
+  display: block;
+  border-bottom: 1px solid #e8dfec;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.aside .nav li a:not(.active):hover {
+  padding-left: 5px;
+}
+
+.aside .nav li a .fa {
+  margin-right: 5px;
+}
+
+.aside .copyright-text {
+  /* background-color: #ededed; */
+  font-size: 13px;
+  color: #7d7d7d;
 }
 
 /*Home*/
+.home {
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .intro {
+  text-align: center;
+}
+
+.home .intro img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}

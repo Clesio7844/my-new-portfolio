@@ -542,6 +542,8 @@ body {
   flex: 0 0 33.33%;
   max-width: 33.33%;
   margin-bottom: 30px;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .service .service-item .service-item-inner {
@@ -595,4 +597,29 @@ body {
   color: #504e70;
   line-height: 25px;
   margin: 0;
+}
+
+/* Portfolio section start  */
+.portfolio .portfolio-filter {
+  /* background-color: red; */
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.portfolio .portfolio-filter button {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0 10px;
+  color: #302e4d;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  padding-bottom: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
